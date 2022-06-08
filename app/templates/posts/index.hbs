@@ -1,0 +1,14 @@
+{{page-title "Posts"}}
+<h1>Welcome to my blog page!</h1>
+<label>Enter new blog: </label>
+<Input @value={{this.newTitle}} @enter={{this.addPost}} />
+<ul>
+  {{#each @model as |post|}}
+    <li>
+      <LinkTo @route="posts.post" @model={{post}}>
+        <PostView @post={{post}} @showBody={{false}} />
+      </LinkTo>
+    </li>
+  {{/each}}
+</ul>
+{{outlet}}

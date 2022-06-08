@@ -1,0 +1,12 @@
+<h3>{{@post.title}}</h3>
+
+{{#if @showBody}}
+  <span>{{@post.formattedPublishedAt}}</span>
+  <pre style="white-space: pre-wrap;">{{@post.body}}</pre>
+  <button type="button" {{on "click" (fn this.removePost @post)}}>
+    Remove post
+  </button>
+  <br><br>
+  <label>EDIT BLOG DESCRIPTION: </label>
+  <Input @value={{this.newBody}} @enter={{fn this.updateBody @post}} />
+{{/if}}

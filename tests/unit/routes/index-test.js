@@ -1,11 +1,11 @@
 import { module, test } from 'qunit';
 import { setupTest } from 'blog/tests/helpers';
 
-module('Unit | Route | posts', function (hooks) {
+module('Unit | Route | index', function (hooks) {
   setupTest(hooks);
 
   test('it exists', function (assert) {
-    const route = this.owner.lookup('route:posts');
+    const route = this.owner.lookup('route:index');
     assert.ok(route);
   });
 });
