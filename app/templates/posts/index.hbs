@@ -5,8 +5,8 @@
 <ul>
   {{#each @model as |post|}}
     <li>
-      <LinkTo @route="posts.post" @model={{post}}>
-        <PostView @post={{post}} @showBody={{false}} />
+      <LinkTo @route="posts.post" @model={{post.id}}>
+        <PostView @post={{post}} @showBody={{false}}/>
       </LinkTo>
     </li>
   {{/each}}
